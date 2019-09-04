@@ -9,18 +9,19 @@ body {
 /* 顶部导航栏 */
 .top-bar {
     height: 40px;
-    width: 100%;
-    background: #d3d3d3;
+    color: #b0b0b0;
     font-size: 12px;
+    background: #333333;
 }
 .top-bar a {
     text-decoration: none; /* 去除下划线 */
-    /* margin-right: 5px; 链接之间的间距. */
+    color: #b0b0b0;
+    line-height: 40px; /* 垂直居中 */
+    display: inline-block;
 }
-.separator{
-    padding: 0 0.5px;
-    border-left: 1px solid #fff;
-    margin: 0 8px;
+.left-message-bar .spe, .right-login-bar .spe{
+    margin: 0 .3em;
+    color: #424242;
 }
 .topbar-box {
     margin-left: auto;
@@ -29,18 +30,23 @@ body {
 }
 .left-message-bar{
     float: left;
-    line-height: 40px; /* 居中 */
-    text-align: center;
-
 }
 .right-login-bar {
     float: right;
-    line-height: 40px; /* 居中 */
 }
 .icon-shoppingCart {
     display: inline-block; /* 内联块,设置之后才能与上面的 div 出现在同一行 */
 }
-.icon-shoppingCart img {
-    height: 20px;
-    width: 20px;
+#move {
+    margin-right: 18px;
+}
+.shoppingcart {
+    position: relative;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+    background: #424242;
+    padding: 0 20px;
 }
