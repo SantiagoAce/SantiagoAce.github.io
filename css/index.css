@@ -15,7 +15,7 @@ body {
 }
 .top-bar a {
     text-decoration: none; /* 去除下划线 */
-    /* margin-right: 5px; 链接之间的间距 */
+    /* margin-right: 5px; 链接之间的间距. */
 }
 .separator{
     padding: 0 0.5px;
