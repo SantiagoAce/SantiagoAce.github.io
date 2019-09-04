@@ -1,0 +1,46 @@
+body {
+    /* 初始化页面 */
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+
+/* 顶部导航栏 */
+.top-bar {
+    height: 40px;
+    width: 100%;
+    background: #d3d3d3;
+    font-size: 12px;
+}
+.top-bar a {
+    text-decoration: none; /* 去除下划线 */
+    /* margin-right: 5px; 链接之间的间距 */
+}
+.separator{
+    padding: 0 0.5px;
+    border-left: 1px solid #fff;
+    margin: 0 8px;
+}
+.topbar-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1220px;
+}
+.left-message-bar{
+    float: left;
+    line-height: 40px; /* 居中 */
+    text-align: center;
+
+}
+.right-login-bar {
+    float: right;
+    line-height: 40px; /* 居中 */
+}
+.icon-shoppingCart {
+    display: inline-block; /* 内联块,设置之后才能与上面的 div 出现在同一行 */
+}
+.icon-shoppingCart img {
+    height: 20px;
+    width: 20px;
+}
