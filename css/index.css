@@ -8,30 +8,35 @@ body {
 
 /* 顶部导航栏 */
 .top-bar {
-    height: 40px;
-    color: #b0b0b0;
+    position: relative;
+    /* z-index: 30; */
     font-size: 12px;
+    color: #b0b0b0;
     background: #333333;
 }
-.top-bar a {
+.topbar-box {
+    width: 1220px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topbar-box a {
     text-decoration: none; /* 去除下划线 */
     color: #b0b0b0;
     line-height: 40px; /* 垂直居中 */
     display: inline-block;
 }
 .left-message-bar .spe, .right-login-bar .spe{
-    margin: 0 .3em;
+    margin: 0 .2em;
     color: #424242;
 }
-.topbar-box {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1220px;
-}
 .left-message-bar{
+    height: 40px;
     float: left;
 }
 .right-login-bar {
+    position: relative;
+    height: 40px;
     float: right;
 }
 .icon-shoppingCart {
@@ -49,4 +54,69 @@ body {
     color: #b0b0b0;
     background: #424242;
     padding: 0 20px;
+}
+.header-bar {
+    position: relative;
+    height: 100px;
+    /* clear: both;  清除浮动，不然会接在上面的导航后面 */
+    background: yellowgreen;
+}
+.headerbar-inner {
+    width: 1220px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background: wheat;     
+}
+.header-logo {
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
+.middle-bar {
+    float: left;
+    width: 850px;
+    line-height: 100px;
+    margin: 0;
+    text-align: center;
+}
+.middle-bar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    margin: 0 8px;
+}
+.search-bar {
+    position: relative;
+    float: right;
+    width: 300px;
+    margin-top: 25px;
+}
+/* .hide {
+    display: none !important;
+} */
+#search-text {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    border-right: 0; /* 右边框与搜索框左边框重合，删掉一条边 */
+    outline: 0; /* 点击时没有外框线 */
+    z-index: 1;
+    padding: 0 10px; 
+    transition: all .2s; /* 外边框显示、消失速度 */
+}
+#search-text:focus, .search-btn:focus {
+    border: 1px solid #ff6700;
+}
+.search-btn {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    outline: 0;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    transition: all .2s;
 }
