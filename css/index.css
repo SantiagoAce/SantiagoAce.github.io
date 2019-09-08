@@ -217,7 +217,7 @@ body {
 .categoryList li:hover {
     background: #ff6700;
 }
-.categoryList li a {
+.categoryList-a {
     text-decoration: none; /* 1.清除下划线 */
     display: block;  /* 2.以块状显示 */
     height: 42px;  /* 3.设置高度 */
@@ -235,4 +235,49 @@ body {
     border-right: 2px solid #ddd;  /* 设置边框 */
     margin-top: 16px;
     transform: rotate(45deg);  /* 把小正方形旋转45°，配合上面添加的上边框和下边框，看上去就是一个小箭头的标记 */
+}
+
+        /* 隐藏菜单列表 */
+.hidden-list {
+    display: none;
+    width: 985px;
+    height: 458px;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 22;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+}
+.categoryList-a:hover div {
+    display: block;
+}
+.hidden-list a {
+    color: #333333;
+    text-decoration: none;
+}
+.hidden-list a:hover {
+    color: #ff6700;
+    transition: color .2s;
+}
+.list-table {
+    width: 985px;
+    height: 458px;
+    border-spacing: 0;
+}
+.list-table td {
+    padding: 13px 20px;
+    width: 246px;
+    height: 50px;
+}
+.list-table img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+.list-table span {
+    padding-left: 8px; 
 }
