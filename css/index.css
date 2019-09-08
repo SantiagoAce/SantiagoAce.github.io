@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-family: "微软雅黑";
     font-size: 16px;
+    color: #333333;
 }
 
 /* 顶部导航栏 */
@@ -174,4 +175,64 @@ body {
 }
 #border-bottom {
     border-bottom: 1px solid #f5f5f5;
+}
+
+/* 内容区 */
+    /* 中部 */
+        /* 主页菜单 */
+.home-box {
+    position: relative;
+    width: 1220px;
+    height: 630px; /* 设置高度是为了强行撑开这个父元素 */
+    margin-left: auto;
+    margin-right: auto;
+    background: goldenrod;
+    /* overflow: hidden; */
+}
+.homeBox-inner {
+    position: relative;
+    bottom: 26px;
+}
+.menus-box {
+    
+}
+.menus {
+    position: absolute;
+    top: 26px;
+    width: 234px;
+    height: 460px;
+    font-size: 14px;
+}
+.categoryList {
+    margin: 0;
+    padding: 20px 0;
+    height: 420px;
+    border: 0;
+    list-style-type: none; /* 去掉项目列表标记 */
+    background: rgba(105, 101, 101, 6);
+}
+.categoryList li {
+    display: list-item;
+}
+.categoryList li:hover {
+    background: #ff6700;
+}
+.categoryList li a {
+    text-decoration: none; /* 1.清除下划线 */
+    display: block;  /* 2.以块状显示 */
+    height: 42px;  /* 3.设置高度 */
+    line-height: 42px;  /* 4.垂直居中 */
+    padding-left: 30px;  /* 5.设置内边距，给左边留出点距离 */
+    color: #ffffff;
+}
+.icon-more {
+    position: absolute;
+    /* display: inline-block; */
+    right: 25px;
+    width: 7px;  /* 控制大小 */
+    height: 7px;
+    border-top: 2px solid #ddd;  /* 设置边框 */
+    border-right: 2px solid #ddd;  /* 设置边框 */
+    margin-top: 16px;
+    transform: rotate(45deg);  /* 把小正方形旋转45°，配合上面添加的上边框和下边框，看上去就是一个小箭头的标记 */
 }
