@@ -197,6 +197,7 @@ body {
     
 }
 .menus {
+    z-index: 99;
     position: absolute;
     top: 26px;
     width: 234px;
@@ -209,7 +210,7 @@ body {
     height: 420px;
     border: 0;
     list-style-type: none; /* 去掉项目列表标记 */
-    background: rgba(105, 101, 101, 6);
+    background: rgba(105, 101, 101, .6);
 }
 .categoryList li {
     display: list-item;
@@ -245,7 +246,7 @@ body {
     position: absolute;
     left: 234px;
     top: 0;
-    z-index: 22;
+    z-index: 50;
     border: 1px solid #e0e0e0;
     border-left: 0;
     background: #ffffff;
@@ -280,4 +281,93 @@ body {
 }
 .list-table span {
     padding-left: 8px; 
+}
+
+    /* 淡入淡出轮播图 */
+        /* 设置图片样式 */
+#slider{
+    z-index: 10;
+    top: 24px;
+    width: 1220px;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+#slider img {
+    width: 1220px;
+    height: 460px;
+    position: absolute; 
+    top: 0;
+    left: 0;  /* 图片绝对定位，在左上角重叠在一起 */
+    opacity: 0; /* 初始不透明度为0，图片看不见 */
+    transition: opacity 800ms linear; /* 【定义一个关于透明度变化的 transition 】 */
+}
+#slider img.active {
+    opacity: 1;  /* 有 active 类的图片不透明度为1，即显示图片 */
+}
+        /* 设置右下页码按钮样式 */
+#slider div {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    padding: 5px;
+    border-radius: 25px;
+    /* background: rgba(0, 0, 0, .8); */
+}
+#slider span {
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #ffffff;
+    border-color: hsla(0, 0%, 100%, .3);
+    border-radius: 10px; /* 设置页码为圆形 */
+    margin: 0 4px;
+    background: rgba(0, 0, 0, .4);
+}
+#slider span.active {
+    background: #ffffff; /* 有 active 类的按钮改变颜色，即突显选中状态 */
+    background-color: hsla(0, 0%, 100%, .4);
+    border-color: rgba(0, 0, 0, .4);
+}
+#slider span.fover {
+    background-color: hsla(0, 0%, 100%, .4);
+    border-color: rgba(0, 0, 0, .4);
+}
+        /* 设置左右按钮的样式 */
+#slider p {
+    width: 35px;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px; /* 设置垂直居中 */
+    color: #d8d8d8;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer; /* 设置鼠标手指状态 */
+    /* 设置不能选择文本 */
+    -ms-user-select: none; /* IE10 */
+    -webkit-user-select: none; /* webkit浏览器 */
+    user-select: none;
+}
+#slider p.slider-left {
+    left: 234px;
+}
+#slider p.slider-right {
+    right: 0;
+}
+#slider:hover p {
+    display: block;
+}
+#slider p:hover {
+    font-size: 26px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .4);
+}
+.slider-right:hover {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.slider-left:hover {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
