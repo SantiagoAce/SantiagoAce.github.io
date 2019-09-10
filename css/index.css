@@ -61,14 +61,14 @@ body {
     position: relative;
     height: 100px;
     /* clear: both;  清除浮动，不然会接在上面的导航后面 */
-    background: yellowgreen;
+    background: #ffffff;
 }
 .headerbar-inner {
     width: 1220px;
     height: 100px;
     margin-right: auto;
     margin-left: auto;
-    background: wheat;     
+    background: #ffffff;     
 }
 .header-logo {
     float: left;
@@ -183,15 +183,15 @@ body {
 .home-box {
     position: relative;
     width: 1220px;
-    height: 630px; /* 设置高度是为了强行撑开这个父元素 */
+    height: 643px; /* 设置高度是为了强行撑开这个父元素 */
     margin-left: auto;
     margin-right: auto;
-    background: goldenrod;
+    background: #ffffff;
     /* overflow: hidden; */
 }
 .homeBox-inner {
     position: relative;
-    bottom: 26px;
+    /* bottom: 26px; */
 }
 .menus-box {
     
@@ -199,7 +199,7 @@ body {
 .menus {
     z-index: 99;
     position: absolute;
-    top: 26px;
+    top: 1px;
     width: 234px;
     height: 460px;
     font-size: 14px;
@@ -245,7 +245,7 @@ body {
     height: 458px;
     position: absolute;
     left: 234px;
-    top: 0;
+    top: -1px;
     z-index: 50;
     border: 1px solid #e0e0e0;
     border-left: 0;
@@ -287,7 +287,7 @@ body {
         /* 设置图片样式 */
 #slider{
     z-index: 10;
-    top: 24px;
+    bottom: 1px;
     width: 1220px;
     height: 460px;
     overflow: hidden;
@@ -370,4 +370,90 @@ body {
 .slider-left:hover {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+}
+
+    /* 广告栏1 */
+.sub-show {
+    float: left;
+    margin-top: 12px;
+}
+.span1 {
+    float: left;
+    width: 234px;
+    /* margin-left: 14px; */
+}
+.channel-list {
+    margin: 0;
+    padding: 3px;
+    list-style-type: none;
+    font-size: 12px;
+    text-align: center;
+    background: #5f5750;
+}
+.channel-list li {
+    position: relative;
+    float: left;
+    width: 70px;
+    height: 82px;
+    padding: 0 3px;
+}
+.channel-list li::before {
+    top: -1px;
+    left: 6px;
+    width: 64px;
+    height: 1px;
+}
+.channel-list li::after {
+    top: 6px;
+    left: 0;
+    width: 1px;
+    height: 70px;
+
+}
+.channel-list li::before, .channel-list li::after {
+    position: absolute;
+    content: "";
+    background: #665e57;
+}
+.channel-list a {
+    display: block;
+    padding-top: 18px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: .7;
+}
+.channel-list img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+}
+.span2 {
+    float: left;
+    width: 985px;
+    /* margin-left: 10px; */
+}
+.span2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.span2 ul li {
+    float: left;
+    margin-left: 14px;
+    width: 314px;
+    height: 170px;
+}
+.span2 img {
+    display: block;
+    width: 316px;
+    height: 170px;
+}
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
 }
